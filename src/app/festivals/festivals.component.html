@@ -1,0 +1,24 @@
+<!-- <div class="container" *ngFor="let festival of festival$ | async">
+    <div class="row">
+        <div class="col">
+            <h1>{{festival.name}}</h1>
+        </div>
+        <div class="col"><a>{{festival.country}}</a>
+            <a>{{festival.city}}</a></div>
+        <a class="btn btn-danger m-3" (click)="addFav(festival.id)">favorite</a>
+    </div>
+</div> -->
+
+<div class="row row-cols-1 row-cols-md-4">
+    <div class="col mb-4" *ngFor="let festival of festival$ | async">
+        <div class="card" >
+            <!-- <img src="..." class="card-img-top" alt="..."> -->
+            <div class="card-body">
+                <h5 class="card-title">{{festival.name}}</h5>
+                <p class="card-text">{{festival.country}}</p>
+                <p class="card-text"><small class="text-muted">{{festival.city}}</small></p>
+                <a class="btn btn-info m-3" (click)="addFav(festival.id)">favorite</a>
+            </div>
+        </div>
+    </div>
+</div>

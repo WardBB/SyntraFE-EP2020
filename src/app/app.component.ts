@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'SyntraFEEP2020festival';
+  title = 'FestiFavs Benelux';
+  subtitle = 'your favorite festivals in a list'
 }
