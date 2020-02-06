@@ -1,13 +1,8 @@
 <p>favorites works!</p>
-
-<!-- <div *ngFor="let festival of festivals$ | async">
+<div *ngIf="(festivals$ | async) === null">No favorites in list</div>
+<div *ngFor="let festival of festivals$ | async">
     <div class="col">
         <h1>{{festival.name}}</h1>
+        <a class="btn btn-danger m-3" (click)="deleteFav(festival.id)">remove</a>
     </div>
-</div> -->
-
-<div *ngFor="let favorite of favorites$ | async">
-    <h1>{{favorite.id}}</h1>
-    <a class="btn btn-danger m-3" (click)="deleteFav(favorite.id)">remove</a>
-
 </div>

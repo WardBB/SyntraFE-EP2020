@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Festival } from 'src/app/shared/model/festival.model'
 import { FestivalService } from 'src/app/shared/services/festival.service';
-import { Observable } from 'rxjs';
+import { Observable, empty } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
+import { EmptyObservable } from 'rxjs/observable/EmptyObservable';
 
 
 @Component({
@@ -29,7 +30,13 @@ export class FavoritesComponent implements OnInit {
     this.favorites$
       .pipe(map(favorites => favorites.map(favorite => favorite.id)))
       .subscribe(ids => {
+        if(ids.length === 0){
+          // this.festivals$ = new Observable<Festival[]>();
+          this.festivals$ = empty().pipe(map(_ => [] as Festival[]))
+          return; 
+        }
         this.festivals$ = this.festivalService.getByIds(ids);
+        console.log(ids);
       });
   }
 
