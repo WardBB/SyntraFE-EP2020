@@ -17,8 +17,15 @@ export class FavoritesComponent implements OnInit {
 
   constructor(private festivalService: FestivalService) { }
 
+  deleteFav(favId: number){
+    console.log("Try Delete", favId);
+
+    this.festivalService.deleteFav(favId).subscribe(res => console.log);
+  }
+
   ngOnInit() {
     this.favorites$ = this.festivalService.getFavorites();
+
     this.favorites$
       .pipe(map(favorites => favorites.map(favorite => favorite.id)))
       .subscribe(ids => {

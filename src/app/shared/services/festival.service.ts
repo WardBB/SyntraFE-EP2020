@@ -51,6 +51,14 @@ addFavorite(id: number): Observable<any> {
   .post(this.urlFavorites, {id}, { headers: headers });
 }
 
+deleteFav(favId: number) {
+  const url = `${this.urlFavorites}/${+favId}`;
+
+  console.log(favId, url);
+
+  return this.http.delete(url).pipe();
+}
+
  ngOnInit() {
 
  }
