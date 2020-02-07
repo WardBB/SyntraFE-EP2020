@@ -23,17 +23,6 @@ export class FestivalsComponent implements OnInit {
 
   }
 
-  // detail(festivalId: string) {
-  //   console.log(festivalId);
-  //   if (this.selectedId == festivalId) {
-  //     this.selectedId = null;
-  //     // this.selected$ = null;
-  //     return;
-  //   }
-  //   this.selectedId = festivalId;
-  //   // this.selected$ = this.festivalService.getByIds(festivalId);
-  // }
-
 
   ngOnInit() {
 

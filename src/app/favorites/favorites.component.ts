@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Festival } from 'src/app/shared/model/festival.model'
 import { FestivalService } from 'src/app/shared/services/festival.service';
 import { Observable, empty } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
-import { EmptyObservable } from 'rxjs/observable/EmptyObservable';
+import { map } from 'rxjs/operators';
 
 
 @Component({
