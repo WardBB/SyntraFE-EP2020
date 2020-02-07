@@ -11,6 +11,8 @@ import { Observable } from 'rxjs';
 export class FestivalsComponent implements OnInit {
 
   public festival$: Observable<Festival[]>;
+  public selected$: Observable<Festival>;
+  public selectedId: string;
 
   constructor(private festivalService: FestivalService) { }
 
@@ -20,6 +22,17 @@ export class FestivalsComponent implements OnInit {
     this.festivalService.addFavorite(id).subscribe();
 
   }
+
+  // detail(festivalId: string) {
+  //   console.log(festivalId);
+  //   if (this.selectedId == festivalId) {
+  //     this.selectedId = null;
+  //     // this.selected$ = null;
+  //     return;
+  //   }
+  //   this.selectedId = festivalId;
+  //   // this.selected$ = this.festivalService.getByIds(festivalId);
+  // }
 
 
   ngOnInit() {

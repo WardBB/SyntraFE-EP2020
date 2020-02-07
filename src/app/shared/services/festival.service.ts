@@ -37,11 +37,6 @@ getFavorites(): Observable<Festival[]> {
     .pipe(map(res => res));
 }
 
-// getDetail(detailUrl: string): Observable<Festival[]> {
-//   return this.http
-//     .get<any[]>(detailUrl)
-//     .pipe();
-// }
 
 addFavorite(id: number): Observable<any> {
 
