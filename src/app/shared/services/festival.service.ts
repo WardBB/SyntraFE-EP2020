@@ -18,7 +18,7 @@ export class FestivalService {
 getFestivals(): Observable<Festival[]> {
   return this.http
     .get<Festival[]>(this.urlFestivals)
-    .pipe(tap(result => console.log("all festivals:", result)));
+    .pipe(tap(result => console.log("all festivals:", result.length)));
 }
 
 getByIds(ids: number[]): Observable<Festival[]> {
