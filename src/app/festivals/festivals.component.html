@@ -1,13 +1,7 @@
-<!-- <div class="container" *ngFor="let festival of festival$ | async">
-    <div class="row">
-        <div class="col">
-            <h1>{{festival.name}}</h1>
-        </div>
-        <div class="col"><a>{{festival.country}}</a>
-            <a>{{festival.city}}</a></div>
-        <a class="btn btn-danger m-3" (click)="addFav(festival.id)">favorite</a>
-    </div>
-</div> -->
+
+<div>
+    <input type="text" id="search" name="search" placeholder="Search for festivals..." [formControl]="search" autofocus />
+</div>
 
 <div class="container" style="margin-top: 15px;">
     <div class="row row-cols-1 row-cols-md-4">
