@@ -1,7 +1,25 @@
-<p>favorites works!</p>
-
-<div *ngFor="let festival of festivals$ | async">
+<div *ngIf="(festivals$ | async) === null">No favorites in list</div>
+<!-- <div *ngFor="let festival of festivals$ | async">
     <div class="col">
         <h1>{{festival.name}}</h1>
+
+
+
     </div>
-</div>
+</div> -->
+
+<div class="row row-cols-1 row-cols-md-5">
+    <div class="col mb-1" *ngFor="let festival of festivals$ | async">
+        <div class="card">
+            <img src="/assets/img/{{festival.img}}" class="card-img-top" alt="{{festival.name}}">
+            <div class="card-body">
+                <h5 class="card-title">{{festival.name}}</h5>
+                <p class="card-text">{{festival.country}}</p>
+                <p class="card-text"><small class="text-muted">{{festival.city}}</small></p>
+                <p>Date: from {{festival.from}} to {{festival.til}}</p>
+                <p>Festival homepage: <a href="{{festival.URL}}"> {{festival.name}}</a></p>
+
+                <a class="btn btn-info" (click)="deleteFav(festival.id)">remove</a>
+            </div>
+        </div>
+    </div>

@@ -37,11 +37,6 @@ getFavorites(): Observable<Festival[]> {
     .pipe(map(res => res));
 }
 
-// getDetail(detailUrl: string): Observable<Festival[]> {
-//   return this.http
-//     .get<any[]>(detailUrl)
-//     .pipe();
-// }
 
 addFavorite(id: number): Observable<any> {
 
@@ -49,6 +44,14 @@ addFavorite(id: number): Observable<any> {
 
   return this.http
   .post(this.urlFavorites, {id}, { headers: headers });
+}
+
+deleteFav(favId: number) {
+  const url = `${this.urlFavorites}/${+favId}`;
+
+  console.log(favId, url);
+
+  return this.http.delete(url).pipe();
 }
 
  ngOnInit() {
