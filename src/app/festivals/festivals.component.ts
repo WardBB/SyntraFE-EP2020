@@ -25,14 +25,22 @@ export class FestivalsComponent implements OnInit {
     this.festivals$ = this.festivalService.getFestivals();
     this.resetList();
 
+    /**
+     * 
+     */
     this.search.valueChanges
       .pipe(debounce(() => interval(100)))
       .subscribe((query: string) => {
         console.log('query:', query);
+
+        /**
+         * This resets items/result in input value is empty
+         */
         if (!query) {
           this.resetList();
         }
 
+        
         const regex = new RegExp(this.escapeRegExp(query), 'i');
         this.festivals$.subscribe(items => {
           this.results = items.filter(item => (

@@ -1,6 +1,0 @@
-<li *ngIf="authService.isLoggedIn" class="nav-item">
-    <button (click)="authService.logout()">Logout</button>
-   </li>
-
-<button *ngIf="canFavorite">Favorite</button>
-<div *ngIf="!canFavorite">Log in om favorieten toe te voegen!</div>
