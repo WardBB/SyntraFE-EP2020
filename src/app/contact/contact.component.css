@@ -1,0 +1,27 @@
+h2 {
+	font-size: 50px;
+	color: #70798C;
+}
+
+div {
+	color:white;
+	font-family: 'Quicksand', sans-serif;
+	margin-bottom: 10px;
+}
+
+p {
+	color: white;
+	font-family: 'Quicksand';
+	font-size: 15px;
+}
+
+.btn {
+color: white;
+background-color: #70798C;
+font-family: 'Quicksand';
+margin: 10px;
+}
+
+.btn:hover {
+	background-color: #5E6572;
+}

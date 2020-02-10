@@ -1,5 +1,6 @@
 
-<div>
+
+<div class="cursive">
     <input type="text" id="search" name="search" placeholder="Search for festivals..." [formControl]="search" autofocus />
 </div>
 
@@ -44,10 +45,10 @@
                         <h3>{{selected.country}}</h3>
                         <h4>{{selected.city}}</h4>
                         <p>Festival homepage: <a href="{{selected.URL}}"> {{selected.name}}</a></p>
-                        <p>Date: from {{selected.from}}
+                        <p class="cursive">Date: from {{selected.from}} til
                             {{selected.til}}</p>
 
-                        <p> Music:{{selected.music}} </p>
+                        <p> Genre: {{selected.music}} </p>
                         <p>{{selected.dayticket}}</p>
                         <p>{{selected.weekendticket}}</p>
                     </div>

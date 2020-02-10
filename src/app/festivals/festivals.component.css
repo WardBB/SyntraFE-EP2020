@@ -1,0 +1,10 @@
+.btn {
+    color: white;
+    background-color: #70798C;
+    font-family: 'Quicksand';
+    margin: 10px;
+    }
+    
+    .btn:hover {
+        background-color: #5E6572;
+    }
