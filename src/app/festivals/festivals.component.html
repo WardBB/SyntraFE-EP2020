@@ -5,7 +5,7 @@
 
 <div class="container" style="margin-top: 15px;">
     <div class="row row-cols-1 row-cols-md-4">
-        <div class="col mb-4" *ngFor="let festival of festivals$ | async">
+        <div class="col mb-4" *ngFor="let festival of results">
             <div class="card">
                 <img src="/assets/img/{{festival.img}}" class="card-img-top" alt="{{festival.name}}">
                 <div class="card-body">
