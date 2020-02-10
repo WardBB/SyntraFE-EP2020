@@ -37,6 +37,7 @@ const config = {
   appId: "1:289727981727:web:f071382def7db205e15aaa"
 };
 
+
 @NgModule({
   declarations: [
     AppComponent,
