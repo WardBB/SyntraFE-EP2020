@@ -9,6 +9,6 @@ export class Festival {
         public til: string,
         public music: string,
         public dayticket: string,
-        public weekendticket: string
+        public wknd: string
     ) { }
 }
