@@ -15,6 +15,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularFireModule } from "@angular/fire";
 import { AngularFireAuthModule } from "@angular/fire/auth";
+import { LoginComponent } from './admin/login/login.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -22,7 +23,8 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'festivals', component: FestivalsComponent },
-  { path: 'favorites', component: FavoritesComponent }
+  { path: 'favorites', component: FavoritesComponent },
+  { path: 'login', component: LoginComponent }
 ];
 
 const config = {
@@ -43,7 +45,8 @@ const config = {
     FestivalsComponent,
     AboutComponent,
     ContactComponent,
-    FavoritesComponent
+    FavoritesComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
