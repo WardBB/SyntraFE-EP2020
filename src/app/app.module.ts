@@ -16,7 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AngularFireModule } from "@angular/fire";
 import { AngularFireAuthModule } from "@angular/fire/auth";
 import { LoginComponent } from './admin/login/login.component';
-import { ReactiveFormsModule } from '@angular/forms';
+// import { ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -46,8 +46,7 @@ const config = {
     AboutComponent,
     ContactComponent,
     FavoritesComponent,
-    LoginComponent,
-    ReactiveFormsModule
+    LoginComponent
   ],
   imports: [
     BrowserModule,
