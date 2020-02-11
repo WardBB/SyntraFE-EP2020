@@ -1567,6 +1567,38 @@
       "5day": "",
       "URL": "https://www.suikerrock.be/nieuws/suikerrock-2020-farewell-edition",
       "img": "suikerrock.jpg"
+    },
+    {
+      "id": 99,
+      "name": "Wish Outdoor",
+      "country": "Netherlands",
+      "city": "Beek en Donk",
+      "from": "03-07-20",
+      "til": "05-07-20",
+      "music": "Multi-genre",
+      "dayticket": "€ 43,95",
+      "wknd": "€ 76,95",
+      "3day": "€ 82,95",
+      "4day": "",
+      "5day": "",
+      "URL": "https://www.wishoutdoor.com/nl/home/",
+      "img": "wishoutdoor.jpg"
+    },
+    {
+      "id": 100,
+      "name": "Listen! Festival",
+      "country": "Belgium",
+      "city": "Brussel",
+      "from": "25-03-20",
+      "til": "30-03-20",
+      "music": "Dance & Electronic",
+      "dayticket": "€ 30,00",
+      "wknd": "€ 55,00",
+      "3day": "",
+      "4day": "",
+      "5day": "",
+      "URL": "https://listenfestival.be/",
+      "img": "listenfestival.jpg"
     }
   ],
   "favorites": [

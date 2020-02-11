@@ -1,6 +1,8 @@
 h2 {
 	font-size: 50px;
-	color: #70798C;
+	color: white;
+	font-family: 'raleway';
+	padding-top: 20px;
 }
 
 div {
@@ -13,11 +15,18 @@ p {
 	color: white;
 	font-family: 'Quicksand';
 	font-size: 15px;
+	padding-bottom: 15px;
+}
+
+a {
+	color: white;
+	font-family: 'Quicksand';
+	font-size: 15px;
 }
 
 .btn {
 color: white;
-background-color: #70798C;
+background-color: #211A1D;
 font-family: 'Quicksand';
 margin: 10px;
 }

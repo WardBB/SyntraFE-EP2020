@@ -1,7 +1,6 @@
 <!-- app.component.html -->
 <div class="container">
-  <h1>{{title}}</h1>
-  <h3>{{subtitle}}</h3>
+  <img id="logo" src="assets/img/logo.png" width="300">
   <!-- <a routerLink="home">home</a>
   <a routerLink="festivals">festivals</a>
   <a routerLink="favorites">favorites</a>
@@ -9,19 +8,18 @@
   <a routerLink="contact">contact</a> -->
 
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Favorite festivals selector</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-dark bg-dark navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav navbar-dark bg-dark">
+    <div class="collapse navbar-light bg-light navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav navbar-light bg-light">
         <a routerLink="home" class="nav-item nav-link">Home</a>
         <a routerLink="festivals" class="nav-item nav-link">Festivals</a>
         <a routerLink="favorites" class="nav-item nav-link">Favorites</a>
         <a routerLink="about" class="nav-item nav-link">About</a>
         <a routerLink="contact" class="nav-item nav-link">Contact</a>
-        <a routerLink="login" class="nav-item nav-link">Login</a>
        </div>
 
        
@@ -31,5 +29,13 @@
   <router-outlet></router-outlet>
   <!-- footer-->
   <hr>
-  <div class="text-center" id="copyright">Copyright Britt, Ward, Marjolijn inc. &copy; 2020</div>
-</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <img src="assets/img/logo.png" class="img1">
+      </div>
+      <div class="col-sm">
+        <div class="text-center" id="copyright">Copyright Britt, Ward, Marjolijn inc. &copy; 2020</div>
+      </div>
+    </div>
+  </div>

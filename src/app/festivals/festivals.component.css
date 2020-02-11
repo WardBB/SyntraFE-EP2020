@@ -1,10 +1,20 @@
 .btn {
     color: white;
-    background-color: #70798C;
+    background-color: #f04149;
     font-family: 'Quicksand';
     margin: 10px;
     }
     
     .btn:hover {
-        background-color: #5E6572;
+        background-color: #B9314F;
+    }
+
+    #search {
+        padding: 8px;
+        margin: 8px;
+    }
+
+    .favorites {
+        text-align: center;
+        border: 3px solid green;
     }

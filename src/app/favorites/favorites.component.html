@@ -7,7 +7,7 @@
 
     </div>
 </div> -->
-
+<div class="favorites"></div>
 <div class="row row-cols-1 row-cols-md-5">
     <div class="col mb-1" *ngFor="let festival of festivals$ | async">
         <div class="card">
@@ -19,7 +19,7 @@
                 <p>Date: from {{festival.from}} to {{festival.til}}</p>
                 <p>Festival homepage: <a href="{{festival.URL}}"> {{festival.name}}</a></p>
 
-                <a class="btn btn-info" (click)="deleteFav(festival.id)">remove</a>
+                <a class="btn btn-info" (click)="deleteFav(festival.id)">Remove</a>
             </div>
         </div>
     </div>

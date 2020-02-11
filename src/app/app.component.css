@@ -9,3 +9,21 @@ div {
 .navbar {
     background-color: #7D98A1;
 }
+
+img {
+    align-items: center;
+}
+
+.img1 {
+    max-height: 150px;
+}
+
+#copyright {
+    color:white;
+    text-align: center;
+}
+
+#logo {
+    display:flex;    
+    align-items:center;
+}
