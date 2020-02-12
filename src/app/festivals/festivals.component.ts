@@ -4,6 +4,8 @@ import { FestivalService } from 'src/app/shared/services/festival.service';
 import { Observable, interval } from 'rxjs';
 import { debounce } from 'rxjs/operators';
 import { FormControl } from '@angular/forms';
+import { AuthService } from '../auth/auth.service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-festivals',
@@ -19,10 +21,17 @@ export class FestivalsComponent implements OnInit {
 
   public search: FormControl = new FormControl();
 
-  constructor(private festivalService: FestivalService) { }
+  public showAddFavorite: boolean;
+
+  constructor(private festivalService: FestivalService,
+    private authService: AuthService,
+    private router: Router
+    ) { }
 
   ngOnInit() {
 
+    this.showAddFavorite = this.authService.isLoggedIn;
+    
     /**
     * This gets the data from the Json list by using a function in festivalService (getFestivals),
     * so we can use it in the festivals component.
@@ -43,7 +52,8 @@ export class FestivalsComponent implements OnInit {
         console.log('query:', query);
 
         /**
-         * This resets items/result in input value is empty
+         * This resets items/result if input value is empty
+         * this might not be necessary, but it's a precaution.
          */
         if (!query) {
           this.resetList();
@@ -85,7 +95,7 @@ export class FestivalsComponent implements OnInit {
   }
 
   /**
-   * 
+   * We use this to make sure the full list of festivals is shown when input value is empty.
    */
   resetList() {
     this.festivals$.subscribe(items => this.results = items);
