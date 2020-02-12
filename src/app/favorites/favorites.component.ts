@@ -24,18 +24,27 @@ export class FavoritesComponent implements OnInit {
 
   ngOnInit() {
     
-    // this.showFavorites = this.authService.isLoggedIn;
+    /**
+     * This checks if user is logged in, if not => route to login page
+     */
     if (!this.authService.isLoggedIn) {
       this.router.navigate(['/login'])
     }
 
+    /**
+     * This gets the data from the Json list by using a function in festivalService (getFavorites),
+     * so we can use it in the favorites component.
+     */
     this.favorites$ = this.festivalService.getFavorites();
   
+
+    /**
+     * 
+     */
     this.favorites$
       .pipe(map(favorites => favorites.map(favorite => favorite.id)))
       .subscribe(ids => {
         if (ids.length === 0) {
-          // this.festivals$ = new Observable<Festival[]>();
           this.festivals$ = empty().pipe(map(_ => [] as Festival[]))
           return;
         }
@@ -44,6 +53,11 @@ export class FavoritesComponent implements OnInit {
       });
   }
 
+  /**
+   * fuction to be used if user wants to delete/remove an item from user's favorites list
+   * uses favId to get the ID of item that needs to be removed from festival.json/favorites
+   * @param favId 
+   */
   deleteFav(favId: number) {
     console.log("Try Delete", favId);
 
