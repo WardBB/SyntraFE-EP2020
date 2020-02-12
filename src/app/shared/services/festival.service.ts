@@ -9,12 +9,22 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 })
 export class FestivalService {
 
+  /**
+   * The festival list in JSON server
+   */
   urlFestivals = "http://localhost:3000/festivals";
 
+  /**
+   * The favorites list in JSON server
+   */
   urlFavorites = "http://localhost:3000/favorites";
 
  constructor(private http: HttpClient) {}
 
+
+ /**
+  * gets all festivals of festival Json returns it into an observable
+  */
 getFestivals(): Observable<Festival[]> {
   return this.http
     .get<Festival[]>(this.urlFestivals)
