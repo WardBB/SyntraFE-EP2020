@@ -23,14 +23,18 @@ export class FestivalService {
 
 
  /**
-  * gets all festivals of festival Json returns it into an observable
+  * gets all festivals of festival Json by url and returns it into an observable.
   */
 getFestivals(): Observable<Festival[]> {
   return this.http
     .get<Festival[]>(this.urlFestivals)
     .pipe(tap(result => console.log("all festivals:", result)));
 }
-
+/**
+ * Gets the id parameter to append to the url of festival JSON 
+ * example output: http://localhost:3000/festivals/4
+ * @param ids 
+ */
 getByIds(ids: number[]): Observable<Festival[]> {
   const params = new URLSearchParams;
   ids.forEach(id => params.append("id", id.toString()));
@@ -41,13 +45,19 @@ getByIds(ids: number[]): Observable<Festival[]> {
     .pipe(tap(result => console.log("festivals by id:", result)));
 }
 
+ /**
+  * gets all favorites of favorites Json by url and returns it into an observable.
+  */
 getFavorites(): Observable<Festival[]> {
   return this.http
     .get<Festival[]>(this.urlFavorites)
     .pipe(map(res => res));
 }
 
-
+/**
+ * Takes id to post/push an item to favorites Json
+ * @param id 
+ */
 addFavorite(id: number): Observable<any> {
 
   const headers = new HttpHeaders().set("Content-type", "application/json");
@@ -56,6 +66,11 @@ addFavorite(id: number): Observable<any> {
   .post(this.urlFavorites, {id}, { headers: headers });
 }
 
+
+/**
+ * uses param favId to append to favorites url to delete an item from the favorites list.
+ * @param favId 
+ */
 deleteFav(favId: number) {
   const url = `${this.urlFavorites}/${+favId}`;
 
