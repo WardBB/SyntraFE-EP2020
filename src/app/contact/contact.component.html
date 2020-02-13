@@ -6,14 +6,14 @@
     <div class="row">
 
         <div class="col-md-9 mb-md-0 mb-5">
-            <form [formGroup]="myForm" id="contact-form" name="contact-form" action="mail.php" method="POST">
+            <form [formGroup]="myGroup"  id="contact-form" name="contact-form" action="mail.php" method="POST">
 
                 <div class="row">
 
                     <div class="col-md-6">
                         <div class="md-form mb-0">
                             <label for="name" class="">Your name:*</label>
-                            <input type="text" id="name" name="name" class="form-control" required>
+                            <input type="text" formControlName="firstName" id="name" name="name" class="form-control" required>
                         </div>
                     </div>
 
