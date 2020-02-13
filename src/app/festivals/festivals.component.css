@@ -18,3 +18,12 @@
         text-align: center;
         border: 3px solid green;
     }
+
+    #btn2 {
+        background-color: #B9314F;
+        color:white;
+    }
+    
+    #btn2:hover {
+        background-color: #f04149;
+    }

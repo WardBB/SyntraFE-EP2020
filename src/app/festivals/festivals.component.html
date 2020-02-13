@@ -1,8 +1,10 @@
-<div>
-    <input type="text" id="search" name="search" placeholder="Search for festivals..." [formControl]="search"
+<div class="justify-content-right text-right">
+    <i class="fas fa-search"></i><input type="text" class="justify-content-left" id="search" name="search" placeholder="Search for festivals..." [formControl]="search"
         autofocus />
 </div>
-<button class="btn btn-primary" *ngIf="authService.isLoggedIn" (click)="authService.logout()">Logout</button>
+<div class="justify-content-right text-right">
+<button id="btn2" class="btn btn-primary" *ngIf="authService.isLoggedIn" (click)="authService.logout()">Logout</button>
+</div>
 <div class="container" style="margin-top: 15px;">
     <div class="row row-cols-1 row-cols-md-4">
         <div class="col mb-4" *ngFor="let festival of results">
@@ -16,11 +18,7 @@
                     <!-- Button trigger modal -->
                     <button class="btn btn-info" (click)="setSelected(festival)" data-toggle="modal"
                         data-target="#staticBackdrop">
-                        Details
-                    </button>
-
-                    <button class="btn btn-info nav-item nav-link" *ngIf="!showAddFavorite" routerLink="/login">log in
-                        to add this festival to your list!</button>
+                        Details</button><button class="btn btn-info nav-item nav-link" *ngIf="!showAddFavorite" routerLink="/login">Favorite</button>
                     <button class="btn btn-info" (click)="addFav(festival.id)" *ngIf="showAddFavorite">
                         Favorite
                     </button>
@@ -50,9 +48,9 @@
                         <p>Date: from {{selected.from}}
                             {{selected.til}}</p>
 
-                        <p> Music:{{selected.music}} </p>
-                        <p>{{selected.dayticket}}</p>
-                        <p>{{selected.weekendticket}}</p>
+                        <p> Genre: {{selected.music}} </p>
+                        <i class="fas fa-calendar-day"></i><p>{{selected.dayticket}}</p>
+                        <i class="fas fa-calendar-week"></i><p>{{selected.weekendticket}}</p>
                     </div>
 
                     <div class="modal-footer">

@@ -1,9 +1,9 @@
 <div class="container" *ngIf="authService.isLoggedIn">
 
 
-<button class="btn btn-primary" *ngIf="authService.isLoggedIn" (click)="authService.logout()">Logout</button>
+<div class="justify-content-right text-right"> <button id="logout" class="btn btn-primary" *ngIf="authService.isLoggedIn" (click)="authService.logout()">Logout</button></div>
 
-<div *ngIf="(festivals$ | async) === null">No favorites in list</div>
+<div id="nofavs" *ngIf="(festivals$ | async) === null">No favorites in list</div>
 <!-- <div *ngFor="let festival of festivals$ | async">
     <div class="col">
         <h1>{{festival.name}}</h1>

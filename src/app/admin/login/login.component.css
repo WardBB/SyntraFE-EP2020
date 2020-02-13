@@ -1,0 +1,16 @@
+h1 {
+    color:white;
+    font-family: "Raleway";
+    font-weight: "bold";
+    font-size: 30px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.btn {
+    background-color: #f04149;
+}
+
+.btn:hover {
+background-color: #B9314F;
+}
