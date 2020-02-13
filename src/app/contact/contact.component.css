@@ -26,11 +26,11 @@ a {
 
 .btn {
 color: white;
-background-color: #211A1D;
+background-color: #FFA69E;
 font-family: 'Quicksand';
 margin: 10px;
 }
 
 .btn:hover {
-	background-color: #5E6572;
+	background-color: #B9314F;
 }
