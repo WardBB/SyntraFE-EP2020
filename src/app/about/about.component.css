@@ -5,6 +5,11 @@ h2 {
 	padding-top: 20px;
 }
 
+h3 {
+	color: white;
+	font-family: 'raleway';
+}
+
 div {
 	color:white;
 	font-family: 'Quicksand', sans-serif;
@@ -15,22 +20,36 @@ p {
 	color: white;
 	font-family: 'Quicksand';
 	font-size: 15px;
-	padding-bottom: 15px;
 }
 
 a {
 	color: white;
 	font-family: 'Quicksand';
-	font-size: 15px;
 }
 
-.btn {
-color: white;
-background-color: #211A1D;
-font-family: 'Quicksand';
-margin: 10px;
+.left {
+	margin-left: 20%;
 }
 
-.btn:hover {
-	background-color: #5E6572;
+.right {
+	margin-right: 20%;
 }
+
+  .fa:hover {
+    opacity: 0.7;
+}
+​
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+​
+.fa-instagram {
+    background: #125688;
+    color: white;
+  }
+​
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
