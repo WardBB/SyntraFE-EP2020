@@ -31,6 +31,6 @@ font-size: 18px;
 font-family: "Quicksand";
 }
 
-#navbarNavAltMarkup {
-    border-radius:10px;
+.navbar {
+    border-radius:3px;
 }

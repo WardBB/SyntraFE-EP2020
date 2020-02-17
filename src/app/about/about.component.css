@@ -1,0 +1,46 @@
+h2 {
+    font-size: 50px;
+    color: white;
+    font-family: 'raleway';
+    padding-top: 20px;
+}
+h3 {
+    color: white;
+    font-family: 'raleway';
+}
+div {
+    color:white;
+    font-family: 'Quicksand', sans-serif;
+    margin-bottom: 10px;
+}
+p {
+    color: white;
+    font-family: 'Quicksand';
+    font-size: 15px;
+}
+a {
+    color: white;
+    font-family: 'Quicksand';
+    margin: 2px;
+}
+.left {
+    margin-left: 20%;
+}
+.right {
+    margin-right: 20%;
+}
+  .fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-instagram {
+    background: #125688;
+    color: white;
+  }
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
