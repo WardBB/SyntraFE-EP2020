@@ -3,7 +3,7 @@ div {
 }
 
 .copyright {
-    color:white;
+    color:#5E6572;
 }
 
 img {
@@ -15,7 +15,7 @@ img {
 }
 
 #copyright {
-    color:white;
+    color: #5E6572;
     text-align: center;
 }
 
@@ -33,4 +33,10 @@ font-family: "Quicksand";
 
 .navbar {
     border-radius:3px;
+}
+
+.navbar-center{
+    /* position: absolute; */
+    left: 50%;
+    transform: translateX(-50%);
 }

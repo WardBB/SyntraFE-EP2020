@@ -1,11 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 /* @import '~bootstrap/dist/css/bootstrap.min.css'; */
 body {
-    background-color: #5E6572;
+    background-color: white;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
   }
   button{
       margin: 2px;
+  }
+
+  hr {
+      color: #5E6572
   }

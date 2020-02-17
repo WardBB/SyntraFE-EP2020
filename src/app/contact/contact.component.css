@@ -1,6 +1,6 @@
 h2 {
 	font-size: 50px;
-	color: white;
+	color: #5E6572;
 	font-family: 'raleway';
 	padding-top: 20px;
 }
@@ -12,14 +12,14 @@ div {
 }
 
 p {
-	color: white;
+	color: #5E6572;
 	font-family: 'Quicksand';
 	font-size: 15px;
 	padding-bottom: 15px;
 }
 
 a {
-	color: white;
+	color: #5E6572;
 	font-family: 'Quicksand';
 	font-size: 15px;
 }
@@ -33,4 +33,25 @@ margin: 10px;
 
 .btn:hover {
 	background-color: #B9314F;
+}
+
+.subject {
+	padding-top: 20px;
+	color: #5E6572;
+}
+
+#pin {
+	color: #5E6572;
+}
+
+#phone {
+	color: #5E6572;
+}
+
+#envelope {
+	color: #5E6572;
+}
+
+.cntct {
+	color: #5E6572;
 }

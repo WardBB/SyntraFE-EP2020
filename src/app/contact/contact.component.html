@@ -12,15 +12,15 @@
 
                     <div class="col-md-6">
                         <div class="md-form mb-0">
-                            <label for="name" class="">Your name:*</label>
-                            <input type="text" formControlName="firstName" id="name" name="name" class="form-control" required>
+                            <label for="name" class="cntct">Your name:*</label>
+                            <input type="text" formControlName="firstName" id="name" name="name" class="form-control" required placeholder="Jennifer Brown">
                         </div>
                     </div>
 
                     <div class="col-md-6">
                         <div class="md-form mb-0">
-                            <label for="phone" class="">Phone:*</label>
-                            <input type="text" id="phone" name="phone" class="form-control" required>
+                            <label for="phone" class="cntct">Phone:*</label>
+                            <input type="text" id="phone" name="phone" class="form-control" required placeholder="+31 6 12 34 56 78">
                         </div>
                     </div>
 
@@ -30,12 +30,12 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="md-form mb-0">
-                            <label for="email" class="">Email:*</label>
-                            <input type="text" id="email" name="email" class="form-control" required>
+                            <label for="email" class="cntct">Email:*</label>
+                            <input type="text" id="email" name="email" class="form-control" required placeholder="info@festifavs.com">
                         </div>
                         <div class="md-form mb-0">
-                            <label for="subject" class="">Subject:*</label>
-                            <input type="text" id="subject" name="subject" class="form-control" required>
+                            <label for="subject" class="subject">Subject:*</label>
+                            <input type="text" id="subject" name="subject" class="form-control" required placeholder="Contact">
                         </div>
                     </div>
                 </div>
@@ -45,8 +45,8 @@
                     <div class="col-md-12">
 
                         <div class="md-form">
-                            <label for="message">Your message:</label>
-                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                            <label for="message" class="cntct">Your message:</label>
+                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" placeholder="Insert your question here"></textarea>
                         </div>
 
                     </div>
@@ -62,15 +62,15 @@
 
         <div class="col-md-3 text-center">
             <ul class="list-unstyled mb-0">
-                <li><i class="fas fa-map-pin mt-4 fa-2x"></i>
+                <li><i class="fas fa-map-pin mt-4 fa-2x" id="pin"></i>
                     <p>3600 Genk, Belgium</p>
                 </li>
 
-                <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                <li><i class="fas fa-phone mt-4 fa-2x" id="phone"></i>
                     <p>+ 01 234 567 89</p>
                 </li>
 
-                <li><i class="fas fa-envelope mt-4 fa-2x"></i><br>
+                <li><i class="fas fa-envelope mt-4 fa-2x" id="envelope"></i><br>
                     <a href="mailto://contact@festifavs.com>contact@festifavs.com">contact@festifavs.com</a>
                 </li>
             </ul>
