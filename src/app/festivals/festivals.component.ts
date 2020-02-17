@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { Festival } from 'src/app/shared/model/festival.model'
 import { FestivalService } from 'src/app/shared/services/festival.service';
 import { Observable, interval } from 'rxjs';
@@ -13,13 +13,16 @@ import { FormControl } from '@angular/forms';
 export class FestivalsComponent implements OnInit {
 
   public festivals$: Observable<Festival[]>;
-  
+
   public results: Festival[];
   public selected: Festival;
 
-  public search: FormControl = new FormControl();  
+  public currentIndex = 20;
 
-  constructor(private festivalService: FestivalService) { }
+  public search: FormControl = new FormControl();
+
+  constructor(private festivalService: FestivalService,
+    private cdr: ChangeDetectorRef) { }
 
   ngOnInit() {
     this.festivals$ = this.festivalService.getFestivals();
@@ -36,13 +39,19 @@ export class FestivalsComponent implements OnInit {
         const regex = new RegExp(this.escapeRegExp(query), 'i');
         this.festivals$.subscribe(items => {
           this.results = items.filter(item => (
-               regex.test(item.name)
+            regex.test(item.name)
             || regex.test(item.country)
             || regex.test(item.city)
           ));
         });
       });
   }
+
+  // LoadMore(){
+  //   this.currentIndex += 10;
+  //   this.festivals$= [...Array(this.currentIndex).keys()];
+  //   this.cdr.detectChanges();
+  // }
 
   addFav(id: number) {
     console.log("add favorite", id);
