@@ -14,3 +14,7 @@ h1 {
 .btn:hover {
 background-color: #B9314F;
 }
+
+#login {
+    margin-bottom: 100px;
+}

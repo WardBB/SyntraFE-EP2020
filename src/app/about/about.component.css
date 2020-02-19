@@ -1,5 +1,5 @@
 h2 {
-    font-size: 45px;
+    font-size: 25px;
     color: #5E6572;
     font-family: 'raleway';
     padding-top: 20px;
@@ -57,3 +57,7 @@ a {
       padding-top: 15px;
       padding-bottom: 15px;
   }
+
+  hr {
+    color:#211A1D;
+}
